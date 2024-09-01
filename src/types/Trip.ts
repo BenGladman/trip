@@ -1,5 +1,6 @@
 import { Activity } from './Activity';
 import { Agent } from './Agent';
+import type { Coordinates } from './Coordinates';
 import { Country } from './Country';
 import { Place } from './Place';
 import type { PlainDate } from './PlainDate';
@@ -12,6 +13,7 @@ export class Trip {
   public readonly places: Place[];
   public readonly activities: Activity[];
   public readonly agent: Agent | null;
+  public readonly coordinates: Coordinates[];
 
   private constructor(
     start: PlainDate,
@@ -21,6 +23,7 @@ export class Trip {
     places: Place[],
     activities: Activity[],
     agent: Agent | null,
+    coordinates: Coordinates[],
   ) {
     this.start = start;
     this.finish = finish;
@@ -29,6 +32,7 @@ export class Trip {
     this.places = places;
     this.activities = activities;
     this.agent = agent;
+    this.coordinates = coordinates;
   }
 
   public static from(
@@ -57,6 +61,14 @@ export class Trip {
 
     const duration = Math.max(0, start.daysUntil(finish) + 1);
 
+    const coordinates: Coordinates[] = [];
+
+    for (const place of placeSet) {
+      if (place.coordinates) {
+        coordinates.push(place.coordinates);
+      }
+    }
+
     return new Trip(
       start,
       finish,
@@ -65,6 +77,7 @@ export class Trip {
       [...placeSet],
       [...activitySet],
       agent,
+      coordinates,
     );
   }
 }

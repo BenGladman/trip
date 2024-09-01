@@ -1,11 +1,9 @@
-import type { Trip } from '../types';
+import { useTripStore } from '../state/tripStore';
 import { TripRow } from './TripRow';
 
-interface TripTableProps {
-  trips: Trip[];
-}
+export function TripTable() {
+  const trips = useTripStore((s) => s.trips);
 
-export function TripTable({ trips }: TripTableProps) {
   return (
     <table>
       <thead>

@@ -1,3 +1,5 @@
+import { clsx } from 'clsx';
+import { useTripStore } from '../state/tripStore';
 import type { Trip } from '../types';
 
 interface TripRowProps {
@@ -5,8 +7,19 @@ interface TripRowProps {
 }
 
 export function TripRow({ trip }: TripRowProps) {
+  const selectedTrip = useTripStore((s) => s.selectedTrip);
+  const selectTrip = useTripStore((s) => s.select);
+
+  const isSelected = trip === selectedTrip;
+
   return (
-    <tr className="align-top even:bg-slate-800 *:p-2">
+    <tr
+      className={clsx(
+        'align-top border-b-2 border-b-slate-100/20 *:p-2',
+        isSelected && 'bg-slate-500/20',
+      )}
+      onClick={() => selectTrip(isSelected ? null : trip)}
+    >
       <td className="whitespace-nowrap">{trip.start.string}</td>
       <td>
         <div className="flex flex-col">

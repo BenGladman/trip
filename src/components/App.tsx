@@ -1,12 +1,16 @@
-import { trips } from '../database/trips/trips';
+import { GlobeScene } from './globe/GlobeScene';
 import { TripTable } from './TripTable';
 
 export function App() {
   return (
     <>
-      <div className="inline-flex flex-col items-center">
-        <h1 className="text-5xl">Trip</h1>
-        <TripTable trips={trips} />
+      <div className="grid fixed inset-0">
+        <div className="row-start-1 col-start-1 -z-10 overflow-hidden">
+          <GlobeScene />
+        </div>
+        <div className="row-start-1 col-start-1 overflow-auto">
+          <TripTable />
+        </div>
       </div>
     </>
   );
