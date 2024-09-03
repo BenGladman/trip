@@ -58,7 +58,7 @@ export async function getDots() {
 
   const calcPosFromLatLon = (lon: number, lat: number) => {
     const phi = Math.PI / 2 - lat;
-    const theta = lon + Math.PI;
+    const theta = lon;
 
     const x = -(dotSphereRadius * Math.sin(phi) * Math.cos(theta));
     const z = dotSphereRadius * Math.sin(phi) * Math.sin(theta);

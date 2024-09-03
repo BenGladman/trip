@@ -19,7 +19,7 @@ export function Globe() {
     if (selectedCoordinates) {
       targetEuler.set(
         MathUtils.degToRad(selectedCoordinates[0]),
-        MathUtils.degToRad(270 - selectedCoordinates[1]),
+        MathUtils.degToRad(90 - selectedCoordinates[1]),
         0,
       );
 

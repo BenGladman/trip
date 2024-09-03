@@ -7,7 +7,7 @@ export function BlueSphere() {
 
   return (
     <mesh>
-      <sphereGeometry args={[20]} />
+      <icosahedronGeometry args={[20, 5]} />
       <meshPhysicalMaterial map={texture} />
     </mesh>
   );

@@ -12,8 +12,8 @@ export function GlobeScene() {
       }}
       dpr={window.devicePixelRatio}
     >
-      <ambientLight intensity={0.4} />
-      <pointLight position={[50, 30, 50]} decay={0} intensity={4} />
+      <ambientLight intensity={1} />
+      <pointLight position={[30, 30, 50]} decay={0} intensity={4} />
       <Globe />
     </Canvas>
   );
