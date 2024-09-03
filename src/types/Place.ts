@@ -19,6 +19,10 @@ export class Place {
     this.coordinates = coordinates;
   }
 
+  public get buttonLabel() {
+    return this.name;
+  }
+
   public static from(
     name: string,
     countryOrParent: Country | Place,

@@ -1,4 +1,4 @@
-import { Activity } from '../types/Activity';
+import { Activity } from '../types';
 
 export const activities = {
   atp: Activity.from('All Tomorrow’s Parties'),

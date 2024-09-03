@@ -1,4 +1,4 @@
-import { Agent } from '../types/Agent';
+import { Agent } from '../types';
 
 export const agents = {
   angloWelsh: Agent.from('Anglo Welsh'),

@@ -35,6 +35,32 @@ export class Trip {
     this.coordinates = coordinates;
   }
 
+  public get durationDescription() {
+    if (this.duration === 1) {
+      return '1 day';
+    }
+    if (this.duration > 1) {
+      return `${this.duration} days`;
+    }
+    return '';
+  }
+
+  public filter(filter: Country | Place | Activity | Agent): boolean {
+    if (filter instanceof Country) {
+      return this.countries.includes(filter);
+    }
+    if (filter instanceof Place) {
+      return this.places.includes(filter);
+    }
+    if (filter instanceof Activity) {
+      return this.activities.includes(filter);
+    }
+    if (filter instanceof Agent) {
+      return this.agent === filter;
+    }
+    return false;
+  }
+
   public static from(
     start: PlainDate,
     finish: PlainDate,

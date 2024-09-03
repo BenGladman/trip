@@ -5,6 +5,10 @@ export class Activity {
     this.name = name;
   }
 
+  public get buttonLabel() {
+    return this.name;
+  }
+
   public static from(name: string) {
     return new Activity(name);
   }

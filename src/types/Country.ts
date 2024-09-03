@@ -11,6 +11,10 @@ export class Country {
     this.flag = flag;
   }
 
+  public get buttonLabel() {
+    return `${this.flag} ${this.name}`;
+  }
+
   public static from(name: string, continent: Continent, flag: string) {
     return new Country(name, continent, flag);
   }
