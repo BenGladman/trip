@@ -2,6 +2,7 @@ import { Activity } from './Activity';
 import { Agent } from './Agent';
 import type { Coordinates } from './Coordinates';
 import { Country } from './Country';
+import type { Filter } from './Filter';
 import { Place } from './Place';
 import type { PlainDate } from './PlainDate';
 
@@ -45,7 +46,7 @@ export class Trip {
     return '';
   }
 
-  public filter(filter: Country | Place | Activity | Agent): boolean {
+  public filter(filter: Filter): boolean {
     if (filter instanceof Country) {
       return this.countries.includes(filter);
     }
@@ -58,7 +59,7 @@ export class Trip {
     if (filter instanceof Agent) {
       return this.agent === filter;
     }
-    return false;
+    return true;
   }
 
   public static from(

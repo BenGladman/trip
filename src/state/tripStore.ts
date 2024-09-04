@@ -1,20 +1,13 @@
 import { create } from 'zustand';
 import { trips } from '../database/trips/trips';
-import {
-  Trip,
-  type Activity,
-  type Agent,
-  type Country,
-  type Place,
-} from '../types';
+import { Trip, type Filter } from '../types';
 
 interface Store {
   trips: Trip[];
   selectedTrip: Trip | null;
   selectTrip: (selectedTrip: Trip | null) => void;
-  filter: Country | Place | Agent | Activity | null;
-  setFilter: (filter: Country | Place | Agent | Activity) => void;
-  clearFilter: () => void;
+  filter: Filter;
+  setFilter: (filter: Filter) => void;
 }
 
 export const useTripStore = create<Store>((set) => ({
@@ -30,5 +23,4 @@ export const useTripStore = create<Store>((set) => ({
       trips: trips.filter((t) => t.filter(filter)),
     });
   },
-  clearFilter: () => set({ filter: null, trips }),
 }));

@@ -1,17 +1,24 @@
+import { clsx } from 'clsx';
 import { useTripStore } from '../state/tripStore';
-import type { Activity, Agent, Country, Place } from '../types';
+import type { Filter } from '../types';
 
 interface FilterButtonProps {
-  filter: Country | Place | Activity | Agent;
+  filter: NonNullable<Filter>;
 }
 
 export function FilterButton({ filter }: FilterButtonProps) {
+  const isActive = useTripStore((s) => s.filter === filter);
   const setFilter = useTripStore((s) => s.setFilter);
 
   return (
     <button
-      className="whitespace-nowrap bg-slate-700/60 px-2 rounded-md"
-      onClick={() => setFilter(filter)}
+      className={clsx(
+        'whitespace-nowrap px-2 rounded-md',
+        isActive ? 'bg-slate-500/70' : 'bg-slate-700/60',
+      )}
+      onClick={() => {
+        setFilter(isActive ? null : filter);
+      }}
     >
       {filter.buttonLabel}
     </button>

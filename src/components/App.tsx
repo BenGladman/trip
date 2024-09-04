@@ -1,5 +1,4 @@
 import { GlobeScene } from './globe/GlobeScene';
-import { ShowAllButton } from './ShowAllButton';
 import { TripTable } from './TripTable';
 
 export function App() {
@@ -10,7 +9,6 @@ export function App() {
           <GlobeScene />
         </div>
         <div className="row-start-1 col-start-1 overflow-auto">
-          <ShowAllButton />
           <TripTable />
         </div>
       </div>
