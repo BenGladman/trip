@@ -42,5 +42,6 @@ export const trips2024 = [
   Trip.from(PlainDate.from(2024, 11, 15), PlainDate.from(2024, 11, 18), [
     places.amsterdam,
     activities.concert,
+    activities.cityBreak,
   ]),
 ];

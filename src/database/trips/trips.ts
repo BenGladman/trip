@@ -37,3 +37,5 @@ export const trips = [
   ...trips2023,
   ...trips2024,
 ];
+
+trips.sort((a, b) => b.start.date.valueOf() - a.start.date.valueOf());
