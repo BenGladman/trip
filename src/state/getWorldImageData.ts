@@ -1,6 +1,4 @@
-import worldPngPath from './world.png';
-
-export async function getWorldImageData(): Promise<ImageData> {
+export async function getWorldImageData(imagePath: string): Promise<ImageData> {
   const imageData = await new Promise<ImageData>((resolve, reject) => {
     const image = new Image();
 
@@ -31,7 +29,7 @@ export async function getWorldImageData(): Promise<ImageData> {
 
     setTimeout(() => reject(new Error('World image load timed out')), 5000);
 
-    image.src = worldPngPath;
+    image.src = imagePath;
   });
 
   return imageData;

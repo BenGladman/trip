@@ -1,10 +1,11 @@
 import { Vector3 } from 'three';
-import { getWorldImageData } from './getWorldImageData';
+import type { Place } from '../types';
+import { LandDotPlacesFinder } from './LandDotPlacesFinder';
 
 // adapted from https://github.com/jessehhydee/threejs-globe/blob/main/index.js
 
 const dotSphereRadius = 20;
-const dotDensity = 2.5;
+const dotDensity = 7;
 const edgeFraction = 0.6;
 
 function radiansPerDot(lat: number) {
@@ -14,17 +15,15 @@ function radiansPerDot(lat: number) {
   return (Math.PI * 2) / dotsForRadius;
 }
 
-export async function getDots() {
-  const imageData = await getWorldImageData();
-
+export async function getLandDots(worldImageData: ImageData) {
   const latStep = radiansPerDot(0);
 
   const latToY = (lat: number) => {
-    return Math.round((Math.PI / 2 - lat) * (imageData.height / Math.PI));
+    return Math.round((Math.PI / 2 - lat) * (worldImageData.height / Math.PI));
   };
 
   const lonToX = (lon: number) => {
-    return Math.round((lon + Math.PI) * (imageData.width / (2 * Math.PI)));
+    return Math.round((lon + Math.PI) * (worldImageData.width / (2 * Math.PI)));
   };
 
   const visibilityForCoordinate = (
@@ -45,9 +44,9 @@ export async function getDots() {
       for (let x = x1; x < x2; x += 1) {
         countAll += 1;
 
-        const dataIndex = (y * imageData.width + x) * 4;
+        const dataIndex = (y * worldImageData.width + x) * 4;
 
-        if (imageData.data[dataIndex] < 20) {
+        if (worldImageData.data[dataIndex] < 20) {
           countLand += 1;
         }
       }
@@ -67,17 +66,31 @@ export async function getDots() {
     return new Vector3(x, y, z);
   };
 
-  const dots: Vector3[] = [];
+  const landDotPlacesFinder = new LandDotPlacesFinder();
+
+  const landDots: Vector3[] = [];
+  const placesAtLandDotIndex = new Map<number, Place[]>();
 
   for (let lat = -Math.PI / 2; lat < Math.PI / 2; lat += latStep) {
     const lonStep = radiansPerDot(lat);
 
     for (let lon = -Math.PI; lon < Math.PI; lon += lonStep) {
-      if (visibilityForCoordinate(lon, lonStep, lat)) {
-        dots.push(calcPosFromLatLon(lon + lonStep / 2, lat - latStep / 2));
+      const placesAtDot = landDotPlacesFinder.getPlacesForDot(
+        lat - latStep,
+        lat,
+        lon,
+        lon + lonStep,
+      );
+
+      if (placesAtDot || visibilityForCoordinate(lon, lonStep, lat)) {
+        landDots.push(calcPosFromLatLon(lon + lonStep / 2, lat - latStep / 2));
+
+        if (placesAtDot) {
+          placesAtLandDotIndex.set(landDots.length - 1, placesAtDot);
+        }
       }
     }
   }
 
-  return dots;
+  return { landDots, placesAtLandDotIndex };
 }

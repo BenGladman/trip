@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { trips } from '../database/trips/trips';
-import { Trip, type Filter } from '../types';
+import { Trip, type Filter, type Place } from '../types';
+import type { Vector3 } from 'three';
 
 interface Store {
   trips: Trip[];
@@ -8,6 +9,8 @@ interface Store {
   selectTrip: (selectedTrip: Trip | null) => void;
   filter: Filter;
   setFilter: (filter: Filter) => void;
+  landDots: Vector3[];
+  placesAtLandDotIndex: Map<number, Place[]>;
 }
 
 export const useTripStore = create<Store>((set) => ({
@@ -23,4 +26,6 @@ export const useTripStore = create<Store>((set) => ({
       trips: trips.filter((t) => t.filter(filter)),
     });
   },
+  landDots: [],
+  placesAtLandDotIndex: new Map(),
 }));
