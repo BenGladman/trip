@@ -50,9 +50,9 @@ export function TripRow({ trip }: TripRowProps) {
           {trip.activities.map((activity) => (
             <FilterButton key={activity.name} filter={activity} />
           ))}
+          {trip.agent && <FilterButton filter={trip.agent} />}
         </div>
       </td>
-      <td>{trip.agent && <FilterButton filter={trip.agent} />}</td>
     </tr>
   );
 }
