@@ -1,7 +1,14 @@
 import { Country } from '../types';
 import { continents } from './continents';
 
+const uk = {
+  england: Country.from('England', continents.europe, '🏴󠁧󠁢󠁥󠁮󠁧󠁿'),
+  scotland: Country.from('Scotland', continents.europe, '🏴󠁧󠁢󠁳󠁣󠁴󠁿'),
+  wales: Country.from('Wales', continents.europe, '🏴󠁧󠁢󠁷󠁬󠁳󠁿'),
+};
+
 export const countries = {
+  ...uk,
   argentina: Country.from('Argentina', continents.southAmerica, '🇦🇷'),
   brazil: Country.from('Brazil', continents.southAmerica, '🇧🇷'),
   canada: Country.from('Canada', continents.northAmerica, '🇨🇦'),
@@ -20,6 +27,5 @@ export const countries = {
   sweden: Country.from('Sweden', continents.europe, '🇸🇪'),
   switzerland: Country.from('Switzerland', continents.europe, '🇨🇭'),
   thailand: Country.from('Thailand', continents.asia, '🇹🇭'),
-  uk: Country.from('UK', continents.europe, '🇬🇧'),
   usa: Country.from('USA', continents.northAmerica, '🇺🇸'),
 };
