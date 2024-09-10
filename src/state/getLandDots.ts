@@ -5,8 +5,8 @@ import { LandDotPlacesFinder } from './LandDotPlacesFinder';
 // adapted from https://github.com/jessehhydee/threejs-globe/blob/main/index.js
 
 const dotSphereRadius = 20;
-const dotDensity = 7;
-const edgeFraction = 0.6;
+const dotDensity = 1.5;
+const edgeFraction = 0.3;
 
 function radiansPerDot(lat: number) {
   const radius = Math.cos(lat) * dotSphereRadius;

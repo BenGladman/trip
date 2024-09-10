@@ -36,10 +36,6 @@ export class LandDotPlacesFinder {
         item.lon >= lon &&
         item.lon < toLon
       ) {
-        if (item.place.name === 'New York') {
-          console.log(item, { lat, toLat, lon, toLon });
-        }
-
         places.push(item.place);
         this.placesAndCoordinates.delete(item);
       }

@@ -1,28 +1,16 @@
 import { useEffect, useRef } from 'react';
-import { Color, InstancedMesh, Object3D, Vector3 } from 'three';
-import worldPngPath from './world.png';
+import { Color, InstancedMesh, Object3D, type Vector3 } from 'three';
 import { initializeTripStoreLandDots } from '../../state/initializeTripStoreLandDots';
 import { useTripStore } from '../../state/tripStore';
 import { Place } from '../../types';
+import { useLandMaterial } from './useLandMaterial';
+import worldPngPath from './world.png';
 
-const landColors = [
-  new Color('hsl(142, 76%, 20%)'),
-  new Color('hsl(142, 76%, 22%)'),
-  new Color('hsl(142, 76%, 24%)'),
-  new Color('hsl(142, 76%, 26%)'),
-  new Color('hsl(142, 76%, 28%)'),
-];
+const landColor = new Color('hsl(142, 76%, 15%)');
+const mixColor = new Color('hsl(43, 96%, 56%)');
 
-const highlightColor1 = new Color('hsl(142, 76%, 90%)');
-const highlightColor2 = new Color('hsl(142, 76%, 60%)');
-const highlightColor3 = new Color('hsl(142, 76%, 34%)');
-
-function getLandColor(pos: Vector3) {
-  const i =
-    (Math.sin(pos.x / 3) + Math.sin(pos.y / 3) + Math.sin(pos.z / 3) + 3) / 6;
-
-  return landColors[Math.floor(i * landColors.length)];
-}
+const highlightColor1 = new Color('hsl(142, 76%, 80%)');
+const highlightColor2 = new Color('hsl(142, 76%, 40%)');
 
 export function Land() {
   const instancedMeshRef = useRef<InstancedMesh>(null!);
@@ -41,40 +29,53 @@ export function Land() {
   useEffect(() => {
     const temp = new Object3D();
 
-    landDots.forEach((dot, i) => {
-      temp.position.set(0, 0, 0);
-      temp.lookAt(dot);
-      temp.position.set(dot.x, dot.y, dot.z);
-      temp.updateMatrix();
-      instancedMeshRef.current.setMatrixAt(i, temp.matrix);
-      instancedMeshRef.current.setColorAt(i, getLandColor(dot));
-    });
+    const setDot = (i: number, dot: Vector3, places?: Place[]) => {
+      let scale = 0;
+      let color = landColor;
 
-    // Update the instance
-    instancedMeshRef.current.instanceMatrix.needsUpdate = true;
-  }, [landDots]);
-
-  useEffect(() => {
-    for (const [i, places] of placesAtLandDotIndex) {
-      if (filterPlace && places.some((place) => place === filterPlace)) {
-        instancedMeshRef.current.setColorAt(i, highlightColor1);
-      } else if (
+      if (
         selectedTrip &&
-        places.some((place) =>
+        places?.some((place) =>
           selectedTrip.places.some((tripPlace) => tripPlace === place),
         )
       ) {
-        instancedMeshRef.current.setColorAt(i, highlightColor2);
+        color = highlightColor1;
+        scale = 2;
       } else if (
-        places.some((place) =>
+        places?.some((place) =>
           trips.some((trip) =>
             trip.places.some((tripPlace) => tripPlace === place),
           ),
         )
       ) {
-        instancedMeshRef.current.setColorAt(i, highlightColor3);
-      } else {
-        instancedMeshRef.current.setColorAt(i, getLandColor(landDots[i]));
+        color = highlightColor2;
+        scale = 1.2;
+      }
+
+      temp.position.set(0, 0, 0);
+      temp.scale.set(1, 1, 1);
+
+      temp.lookAt(dot);
+      temp.position.set(dot.x, dot.y, dot.z);
+
+      if (scale) {
+        temp.scale.set(scale, scale, scale);
+      }
+
+      temp.updateMatrix();
+      instancedMeshRef.current.setMatrixAt(i, temp.matrix);
+      instancedMeshRef.current.setColorAt(i, color);
+    };
+
+    if (!instancedMeshRef.current.userData.isInitialized) {
+      landDots.forEach((dot, i) => {
+        setDot(i, dot, placesAtLandDotIndex.get(i));
+      });
+
+      instancedMeshRef.current.userData.isInitialized = true;
+    } else {
+      for (const [i, places] of placesAtLandDotIndex) {
+        setDot(i, landDots[i], places);
       }
     }
 
@@ -82,15 +83,18 @@ export function Land() {
     if (instancedMeshRef.current.instanceColor) {
       instancedMeshRef.current.instanceColor.needsUpdate = true;
     }
+    instancedMeshRef.current.instanceMatrix.needsUpdate = true;
   }, [placesAtLandDotIndex, filterPlace, selectedTrip, trips, landDots]);
+
+  const landMaterial = useLandMaterial(mixColor);
 
   return (
     <instancedMesh
       ref={instancedMeshRef}
       args={[undefined, undefined, landDots.length]}
+      material={landMaterial}
     >
-      <circleGeometry args={[0.05, 4]} />
-      <meshPhongMaterial />
+      <circleGeometry args={[0.1, 9]} />
     </instancedMesh>
   );
 }
