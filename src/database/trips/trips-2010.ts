@@ -18,5 +18,6 @@ export const trips2010 = [
   Trip.from(PlainDate.from(2010, 11, 29), PlainDate.from(2010, 12, 5), [
     places.scarletHotel,
     places.stIves,
+    activities.drive,
   ]),
 ];

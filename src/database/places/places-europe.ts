@@ -5,9 +5,9 @@ const ireland = {
   carrigadrohid: Place.from('Carrigadrohid', countries.ireland, [51.9, -8.9]),
   cavan: Place.from('Cavan', countries.ireland, [54, -7.4]),
   dingle: Place.from('Dingle', countries.ireland, [52.1, -10.3]),
-  dunmoreEast: Place.from('Dunmore East', countries.ireland),
+  dunmoreEast: Place.from('Dunmore East', countries.ireland, [52.2, -7]),
   galway: Place.from('Galway', countries.ireland, [53.2, -9]),
-  sligo: Place.from('Sligo', countries.ireland),
+  sligo: Place.from('Sligo', countries.ireland, [54.3, -8.5]),
   tralee: Place.from('Tralee', countries.ireland),
 };
 

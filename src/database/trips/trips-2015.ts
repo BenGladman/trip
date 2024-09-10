@@ -12,6 +12,7 @@ export const trips2015 = [
     places.stMawes,
     places.newquay,
     activities.wedding,
+    activities.drive,
   ]),
 
   Trip.from(PlainDate.from(2015, 12, 3), PlainDate.from(2015, 12, 7), [
