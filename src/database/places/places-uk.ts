@@ -76,6 +76,7 @@ const municipalities = {
   warwick: Place.from('Warwick', regions.midlands),
   whitchurch: Place.from('Whitchurch', countries.england),
   windermere: Place.from('Windermere', regions.lakes),
+  woolacombe: Place.from('Woolacombe', regions.devon, [51.2, -4.2]),
 };
 
 const accomodations = {

@@ -3,6 +3,7 @@ import { countries } from '../countries';
 
 const ireland = {
   carrigadrohid: Place.from('Carrigadrohid', countries.ireland, [51.9, -8.9]),
+  cavan: Place.from('Cavan', countries.ireland, [54, -7.4]),
   dingle: Place.from('Dingle', countries.ireland, [52.1, -10.3]),
   dunmoreEast: Place.from('Dunmore East', countries.ireland),
   galway: Place.from('Galway', countries.ireland, [53.2, -9]),

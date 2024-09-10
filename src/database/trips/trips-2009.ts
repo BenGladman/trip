@@ -23,6 +23,11 @@ export const trips2009 = [
     activities.fringe,
   ]),
 
+  Trip.from(PlainDate.from(2009, 9, 11), PlainDate.from(2009, 9, 13), [
+    places.cavan,
+    activities.wedding,
+  ]),
+
   Trip.from(PlainDate.from(2009, 10, 29), PlainDate.from(2009, 11, 1), [
     places.scarletHotel,
     activities.anniversary,

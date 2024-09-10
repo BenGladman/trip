@@ -9,6 +9,11 @@ export const trips2014 = [
     activities.birthday,
   ]),
 
+  Trip.from(PlainDate.from(2014, 8, 17), PlainDate.from(2014, 8, 19), [
+    places.woolacombe,
+    activities.birthday,
+  ]),
+
   Trip.from(PlainDate.from(2014, 9, 13), PlainDate.from(2014, 9, 28), [
     places.banff,
     places.jasper,
