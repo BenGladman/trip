@@ -12,4 +12,9 @@ export const trips2011 = [
   Trip.from(PlainDate.from(2011, 7, 6), PlainDate.from(2011, 7, 10), [
     places.ibiza,
   ]),
+
+  Trip.from(PlainDate.from(2011, 12, 28), PlainDate.from(2012, 1, 4), [
+    places.ely,
+    activities.nye,
+  ]),
 ];

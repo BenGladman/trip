@@ -17,6 +17,11 @@ const regions = {
 };
 
 const municipalities = {
+  ashbyDeLaZouch: Place.from(
+    'Ashby de la Zouch',
+    regions.midlands,
+    [52.7, -1.5],
+  ),
   barmouth: Place.from('Barmouth', countries.wales, [52.7, -4.1]),
   bath: Place.from('Bath', countries.england, [51.4, -2.4]),
   berkhamsted: Place.from('Berkhamsted', countries.england),
@@ -30,6 +35,7 @@ const municipalities = {
   christchurch: Place.from('Christchurch', countries.england),
   durham: Place.from('Durham', countries.england, [54.8, -1.6]),
   edinburgh: Place.from('Edinburgh', countries.scotland, [55.9, -3.4]),
+  ely: Place.from('Ely', countries.england, [52.4, 0.3]),
   falmouth: Place.from('Falmouth', regions.cornwall, [50.2, -5.1]),
   folkestone: Place.from('Folkestone', regions.kent, [51.1, 1.2]),
   foulridge: Place.from('Foulridge', regions.lancashire),

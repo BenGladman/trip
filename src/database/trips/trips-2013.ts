@@ -17,4 +17,9 @@ export const trips2013 = [
     activities.concert,
     activities.cityBreak,
   ]),
+
+  Trip.from(PlainDate.from(2013, 12, 28), PlainDate.from(2014, 1, 4), [
+    places.ashbyDeLaZouch,
+    activities.nye,
+  ]),
 ];
