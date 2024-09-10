@@ -3,6 +3,10 @@ import { activities } from '../activities';
 import { places } from '../places/places';
 
 export const trips2013 = [
+  Trip.from(PlainDate.from(2013, 8, 2), PlainDate.from(2013, 8, 3), [
+    places.pigBrockenhurst,
+  ]),
+
   Trip.from(PlainDate.from(2013, 9, 1), PlainDate.from(2013, 9, 14), [
     places.singapore,
     places.kohSamui,

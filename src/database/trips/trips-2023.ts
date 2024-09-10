@@ -14,6 +14,18 @@ export const trips2023 = [
     agents.kateBoats,
   ]),
 
+  Trip.from(PlainDate.from(2023, 7, 7), PlainDate.from(2023, 7, 8), [
+    places.manchester,
+    activities.birthday,
+    activities.concert,
+  ]),
+
+  Trip.from(PlainDate.from(2023, 8, 18), PlainDate.from(2023, 8, 20), [
+    places.henley,
+    activities.birthday,
+    activities.concert,
+  ]),
+
   Trip.from(PlainDate.from(2023, 8, 31), PlainDate.from(2023, 9, 3), [
     places.greatYarmouth,
     activities.wedding,

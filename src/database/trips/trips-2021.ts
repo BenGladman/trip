@@ -16,4 +16,9 @@ export const trips2021 = [
     places.birch,
     activities.birthday,
   ]),
+
+  Trip.from(PlainDate.from(2021, 10, 29), PlainDate.from(2021, 10, 31), [
+    places.hoxtonHotel,
+    activities.wedding,
+  ]),
 ];
