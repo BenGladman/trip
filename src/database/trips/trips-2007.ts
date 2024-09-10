@@ -16,6 +16,7 @@ export const trips2007 = [
 
   Trip.from(PlainDate.from(2007, 7, 16), PlainDate.from(2007, 7, 30), [
     places.losAngeles,
+    places.santaBarbara,
     places.sanLuisObispo,
     places.monterey,
     places.yosemite,

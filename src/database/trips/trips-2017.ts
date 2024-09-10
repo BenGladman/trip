@@ -4,7 +4,7 @@ import { agents } from '../agents';
 import { places } from '../places/places';
 
 export const trips2017 = [
-  Trip.from(PlainDate.from(2017, 4, 24), PlainDate.from(2017, 4, 30), [
+  Trip.from(PlainDate.from(2017, 4, 26), PlainDate.from(2017, 4, 30), [
     places.dubrovnik,
     activities.cityBreak,
   ]),

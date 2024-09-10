@@ -13,7 +13,7 @@ export const trips2016 = [
     activities.pride,
   ]),
 
-  Trip.from(PlainDate.from(2016, 9, 28), PlainDate.from(2016, 9, 31), [
+  Trip.from(PlainDate.from(2016, 10, 28), PlainDate.from(2016, 10, 30), [
     places.seahamHallHotel,
     activities.anniversary,
   ]),
