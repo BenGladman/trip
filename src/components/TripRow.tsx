@@ -27,7 +27,9 @@ export function TripRow({ trip }: TripRowProps) {
         }
       }}
     >
-      <td className="whitespace-nowrap">{trip.start.string}</td>
+      <td>
+        <FilterButton filter={trip} />
+      </td>
       <td>
         <div className="flex flex-col items-start gap-1">
           {trip.countries.map((country) => (

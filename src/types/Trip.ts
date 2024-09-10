@@ -47,6 +47,9 @@ export class Trip {
   }
 
   public filter(filter: Filter): boolean {
+    if (filter instanceof Trip) {
+      return this === filter;
+    }
     if (filter instanceof Country) {
       return this.countries.includes(filter);
     }
@@ -60,6 +63,10 @@ export class Trip {
       return this.agent === filter;
     }
     return true;
+  }
+
+  public get buttonLabel() {
+    return this.start.string;
   }
 
   public static from(
