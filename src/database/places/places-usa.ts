@@ -8,7 +8,11 @@ const regions = {
 
 const municipalities = {
   boston: Place.from('Boston', regions.newEngland, [42.4, -71]),
-  marthasVineyard: Place.from('Martha’s Vineyard', regions.newEngland),
+  marthasVineyard: Place.from(
+    'Martha’s Vineyard',
+    regions.newEngland,
+    [41.3, -70.6],
+  ),
   losAngeles: Place.from('Los Angeles', regions.california, [34, -118.2]),
   monterey: Place.from('Monterey', regions.california),
   newYork: Place.from('New York', countries.usa, [40.7, -74]),

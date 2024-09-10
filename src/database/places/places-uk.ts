@@ -12,7 +12,6 @@ const regions = {
   norfolk: Place.from('Norfolk', countries.england),
   northumberland: Place.from('Northumberland', countries.england),
   sussex: Place.from('Sussex', countries.england),
-  warwickshire: Place.from('Warwickshire', countries.england, [52.3, -1.6]),
   yorkshire: Place.from('Yorkshire', countries.england),
 };
 
@@ -33,6 +32,7 @@ const municipalities = {
   carbisBay: Place.from('Carbis Bay', regions.cornwall, [50.2, -5.5]),
   cheshunt: Place.from('Cheshunt', countries.england, [51.7, 0]),
   christchurch: Place.from('Christchurch', countries.england),
+  coventry: Place.from('Coventry', regions.midlands, [52.4, -1.5]),
   durham: Place.from('Durham', countries.england, [54.8, -1.6]),
   edinburgh: Place.from('Edinburgh', countries.scotland, [55.9, -3.4]),
   ely: Place.from('Ely', countries.england, [52.4, 0.3]),
@@ -60,6 +60,7 @@ const municipalities = {
   penzance: Place.from('Penzance', regions.cornwall, [50.1, -5.5]),
   pontcysyllte: Place.from('Pontcysyllte', countries.wales, [53, -3.1]),
   poole: Place.from('Poole', countries.england),
+  rugby: Place.from('Rugby', regions.midlands, [52.4, -1.3]),
   rye: Place.from('Rye', regions.sussex, [51, 0.7]),
   skipton: Place.from('Skipton', regions.yorkshire, [54, -2]),
   sowerbyBridge: Place.from('Sowerby Bridge', regions.yorkshire, [53.7, -1.9]),
@@ -73,7 +74,7 @@ const municipalities = {
   ),
   ticehurst: Place.from('Ticehurst', regions.sussex),
   todmorden: Place.from('Todmorden', regions.yorkshire),
-  warwick: Place.from('Warwick', regions.midlands),
+  warwick: Place.from('Warwick', regions.midlands, [52.3, -1.6]),
   whitchurch: Place.from('Whitchurch', countries.england),
   windermere: Place.from('Windermere', regions.lakes),
   woolacombe: Place.from('Woolacombe', regions.devon, [51.2, -4.2]),

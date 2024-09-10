@@ -9,7 +9,9 @@ export const trips2023 = [
   ]),
 
   Trip.from(PlainDate.from(2023, 5, 27), PlainDate.from(2023, 6, 3), [
-    places.warwickshire,
+    places.coventry,
+    places.rugby,
+    places.warwick,
     activities.canalBoat,
     agents.kateBoats,
   ]),
