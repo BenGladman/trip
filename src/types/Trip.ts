@@ -1,3 +1,4 @@
+import { Accommodation } from './Accommodation';
 import { Activity } from './Activity';
 import { Agent } from './Agent';
 import type { Coordinates } from './Coordinates';
@@ -10,30 +11,33 @@ export class Trip {
   public readonly start: PlainDate;
   public readonly finish: PlainDate;
   public readonly duration: number;
-  public readonly countries: Country[];
-  public readonly places: Place[];
-  public readonly activities: Activity[];
+  public readonly countries: readonly Country[];
+  public readonly places: readonly Place[];
+  public readonly accommodations: readonly Accommodation[];
+  public readonly activities: readonly Activity[];
   public readonly agent: Agent | null;
-  public readonly coordinates: Coordinates[];
+  public readonly coordinates: readonly Coordinates[];
 
   private constructor(
     start: PlainDate,
     finish: PlainDate,
     duration: number,
-    countries: Country[],
-    places: Place[],
-    activities: Activity[],
+    countries: Iterable<Country>,
+    places: Iterable<Place>,
+    accommodations: Iterable<Accommodation>,
+    activities: Iterable<Activity>,
     agent: Agent | null,
-    coordinates: Coordinates[],
+    coordinates: Iterable<Coordinates>,
   ) {
     this.start = start;
     this.finish = finish;
     this.duration = duration;
-    this.countries = countries;
-    this.places = places;
-    this.activities = activities;
+    this.countries = Array.from(countries);
+    this.places = Array.from(places);
+    this.accommodations = Array.from(accommodations);
+    this.activities = Array.from(activities);
     this.agent = agent;
-    this.coordinates = coordinates;
+    this.coordinates = Array.from(coordinates);
   }
 
   public get durationDescription() {
@@ -56,6 +60,9 @@ export class Trip {
     if (filter instanceof Place) {
       return this.places.includes(filter);
     }
+    if (filter instanceof Accommodation) {
+      return this.accommodations.includes(filter);
+    }
     if (filter instanceof Activity) {
       return this.activities.includes(filter);
     }
@@ -72,20 +79,28 @@ export class Trip {
   public static from(
     start: PlainDate,
     finish: PlainDate,
-    data: Array<Place | Activity | Agent>,
+    data: Array<Place | Accommodation | Activity | Agent>,
   ) {
     const countrySet = new Set<Country>();
     const placeSet = new Set<Place>();
+    const accommodationSet = new Set<Accommodation>();
     const activitySet = new Set<Activity>();
     let agent: Agent | null = null;
 
+    const addPlace = (place: Place) => {
+      countrySet.add(place.country);
+      for (const parent of place.allParents) {
+        placeSet.add(parent);
+      }
+      placeSet.add(place);
+    };
+
     for (const item of data) {
       if (item instanceof Place) {
-        countrySet.add(item.country);
-        for (const parent of item.allParents) {
-          placeSet.add(parent);
-        }
-        placeSet.add(item);
+        addPlace(item);
+      } else if (item instanceof Accommodation) {
+        accommodationSet.add(item);
+        addPlace(item.place);
       } else if (item instanceof Activity) {
         activitySet.add(item);
       } else if (item instanceof Agent) {
@@ -107,9 +122,10 @@ export class Trip {
       start,
       finish,
       duration,
-      [...countrySet],
-      [...placeSet],
-      [...activitySet],
+      countrySet,
+      placeSet,
+      accommodationSet,
+      activitySet,
       agent,
       coordinates,
     );

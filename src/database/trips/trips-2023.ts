@@ -1,11 +1,12 @@
 import { PlainDate, Trip } from '../../types';
+import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
 import { places } from '../places/places';
 
 export const trips2023 = [
   Trip.from(PlainDate.from(2023, 2, 17), PlainDate.from(2023, 2, 24), [
-    places.sedgefordHall,
+    accommodations.sedgefordHall,
   ]),
 
   Trip.from(PlainDate.from(2023, 5, 27), PlainDate.from(2023, 6, 3), [

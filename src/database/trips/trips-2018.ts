@@ -1,11 +1,12 @@
 import { PlainDate, Trip } from '../../types';
+import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
 import { places } from '../places/places';
 
 export const trips2018 = [
   Trip.from(PlainDate.from(2018, 4, 19), PlainDate.from(2018, 4, 20), [
-    places.curtainHotel,
+    accommodations.curtainHotel,
     activities.birthday,
   ]),
 
@@ -22,17 +23,17 @@ export const trips2018 = [
   ]),
 
   Trip.from(PlainDate.from(2018, 8, 17), PlainDate.from(2018, 8, 26), [
-    places.humbleBee,
-    places.hotelDuVinPoole,
-    places.royalYachtJersey,
-    places.yellohCoteSauvage,
-    places.greeDesLandes,
+    accommodations.humbleBee,
+    accommodations.hotelDuVinPoole,
+    accommodations.royalYachtJersey,
+    accommodations.yellohCoteSauvage,
+    accommodations.greeDesLandes,
     activities.birthday,
     activities.drive,
   ]),
 
   Trip.from(PlainDate.from(2018, 12, 28), PlainDate.from(2019, 1, 4), [
-    places.sedgefordHall,
+    accommodations.sedgefordHall,
     activities.nye,
   ]),
 ];

@@ -1,4 +1,5 @@
 import { PlainDate, Trip } from '../../types';
+import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
 import { places } from '../places/places';
@@ -25,8 +26,8 @@ export const trips2024 = [
   ]),
 
   Trip.from(PlainDate.from(2024, 8, 9), PlainDate.from(2024, 8, 19), [
-    places.fallenAngel,
-    places.chelseaHouseFalmouth,
+    accommodations.fallenAngel,
+    accommodations.chelseaHouseFalmouth,
     activities.birthday,
     activities.drive,
   ]),

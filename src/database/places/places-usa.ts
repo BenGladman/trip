@@ -23,12 +23,7 @@ const municipalities = {
   yosemite: Place.from('Yosemite', regions.california, [37.8, -119.5]),
 };
 
-const accomodations = {
-  arloNomad: Place.from('Arlo Nomad', municipalities.newYork),
-};
-
 export const placesUsa = {
   ...regions,
   ...municipalities,
-  ...accomodations,
 };

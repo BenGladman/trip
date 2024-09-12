@@ -1,4 +1,5 @@
 import { PlainDate, Trip } from '../../types';
+import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { places } from '../places/places';
 
@@ -9,7 +10,7 @@ export const trips2008 = [
   ]),
 
   Trip.from(PlainDate.from(2008, 5, 16), PlainDate.from(2008, 5, 18), [
-    places.butlinsMinehead,
+    accommodations.butlinsMinehead,
     activities.atp,
   ]),
 

@@ -12,13 +12,14 @@ const ireland = {
 };
 
 const municipalities = {
-  algarve: Place.from('Algarve', countries.portugal),
+  algarve: Place.from('Algarve', countries.portugal, [37.3, -8.4]),
   amalfi: Place.from('Amalfi', countries.italy, [40.6, 14.6]),
   amsterdam: Place.from('Amsterdam', countries.netherlands, [52.4, 4.9]),
   barcelona: Place.from('Barcelona', countries.spain, [41.4, 2.2]),
   berlin: Place.from('Berlin', countries.germany, [52.5, 13.1]),
   cilento: Place.from('Cilento', countries.italy),
   cinqueTerre: Place.from('Cinque Terre', countries.italy, [44.1, 9.7]),
+  coteSauvage: Place.from('Côte Sauvage', countries.france, [45.7, -1.2]),
   dubrovnik: Place.from('Dubrovnik', countries.croatia, [42.6, 18.1]),
   florence: Place.from('Florence', countries.italy, [43.8, 11.3]),
   ibiza: Place.from('Ibiza', countries.spain, [39, 1.4]),
@@ -35,24 +36,12 @@ const municipalities = {
   stockholm: Place.from('Stockholm', countries.sweden, [59.3, 18.1]),
   strasbourg: Place.from('Strasbourg', countries.france, [48.6, 7.8]),
   saintJean: Place.from('Saint-Jean-d’Aulps', countries.france, [46.2, 6.7]),
+  stHellier: Place.from('St Helier', countries.jersey, [49.2, -2.1]),
   tuscany: Place.from('Tuscany', countries.italy),
   zurich: Place.from('Zurich', countries.switzerland, [47.4, 8.5]),
-};
-
-const accomodations = {
-  hotel25HoursZurich: Place.from('25hours Hotel', municipalities.zurich),
-  greeDesLandes: Place.from('La Grée Des Landes', municipalities.laGacilly),
-  royalYachtJersey: Place.from('Royal Yacht', countries.jersey),
-  vilaVita: Place.from('Vila Vita', municipalities.algarve, [37.1, -8.4]),
-  yellohCoteSauvage: Place.from(
-    'Yelloh! Côte Sauvage',
-    countries.france,
-    [46.2, -1.5],
-  ),
 };
 
 export const placesEurope = {
   ...ireland,
   ...municipalities,
-  ...accomodations,
 };

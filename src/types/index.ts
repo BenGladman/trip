@@ -1,3 +1,4 @@
+export * from './Accommodation';
 export * from './Activity';
 export * from './Agent';
 export * from './Continent';

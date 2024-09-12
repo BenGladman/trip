@@ -1,4 +1,5 @@
 import { PlainDate, Trip } from '../../types';
+import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
 import { places } from '../places/places';
@@ -22,22 +23,22 @@ export const trips2017 = [
   ]),
 
   Trip.from(PlainDate.from(2017, 8, 17), PlainDate.from(2017, 8, 20), [
-    places.artistResidencePenzance,
+    accommodations.artistResidencePenzance,
     activities.birthday,
   ]),
 
   Trip.from(PlainDate.from(2017, 8, 25), PlainDate.from(2017, 8, 28), [
-    places.countyHotelHexham,
+    accommodations.countyHotelHexham,
     activities.wedding,
   ]),
 
   Trip.from(PlainDate.from(2017, 11, 10), PlainDate.from(2017, 11, 12), [
-    places.hotel25HoursZurich,
+    accommodations.hotel25HoursZurich,
     activities.concert,
   ]),
 
   Trip.from(PlainDate.from(2017, 12, 7), PlainDate.from(2017, 12, 10), [
-    places.arloNomad,
+    accommodations.arloNomad,
     activities.cityBreak,
   ]),
 

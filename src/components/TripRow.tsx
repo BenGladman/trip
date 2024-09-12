@@ -42,6 +42,9 @@ export function TripRow({ trip }: TripRowProps) {
           {trip.places.map((place) => (
             <FilterButton key={place.name} filter={place} />
           ))}
+          {trip.accommodations.map((accommodation) => (
+            <FilterButton key={accommodation.name} filter={accommodation} />
+          ))}
         </div>
       </td>
       <td className="whitespace-nowrap">{trip.durationDescription}</td>

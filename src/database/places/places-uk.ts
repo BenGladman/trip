@@ -41,14 +41,12 @@ const municipalities = {
   foulridge: Place.from('Foulridge', regions.lancashire),
   greatYarmouth: Place.from('Great Yarmouth', regions.norfolk, [52.6, 1.7]),
   hebdenBridge: Place.from('Hebden Bridge', regions.yorkshire, [53.7, -2]),
-  hemelHempstead: Place.from(
-    'Hemel Hempstead',
-    countries.england,
-    [51.8, -0.5],
-  ),
+  hemel: Place.from('Hemel Hempstead', countries.england, [51.8, -0.5]),
   henley: Place.from('Henley-on-Thames', countries.england, [51.5, -0.9]),
   hexham: Place.from('Hexham', regions.northumberland, [55, -2.1]),
   huddersfield: Place.from('Huddersfield', regions.yorkshire),
+  hunstanton: Place.from('Hunstanton', regions.norfolk, [52.9, 0.5]),
+  lechlade: Place.from('Lechlade-on-Thames', regions.cotswolds, [51.7, -1.7]),
   leightonBuzzard: Place.from('Leighton Buzzard', countries.england),
   london: Place.from('London', countries.england, [51.5, -0.1]),
   manchester: Place.from('Manchester', countries.england, [53.5, -2.2]),
@@ -80,37 +78,7 @@ const municipalities = {
   woolacombe: Place.from('Woolacombe', regions.devon, [51.2, -4.2]),
 };
 
-const accomodations = {
-  artistResidencePenzance: Place.from(
-    'Artist Residence',
-    municipalities.penzance,
-  ),
-  birch: Place.from('Birch', municipalities.cheshunt),
-  butlinsMinehead: Place.from('Butlins', municipalities.minehead),
-  chelseaHouseFalmouth: Place.from('Chelsea House', municipalities.falmouth),
-  countyHotelHexham: Place.from('County Hotel', municipalities.hexham),
-  curtainHotel: Place.from('The Curtain', municipalities.london),
-  fallenAngel: Place.from('Fallen Angel', municipalities.mousehole),
-  gannetInn: Place.from('Gannet Inn', municipalities.carbisBay),
-  harbourHotelBristol: Place.from('Harbour Hotel', municipalities.bristol),
-  hotelDuVinPoole: Place.from('Hotel du Vin', municipalities.poole),
-  hoxtonHotel: Place.from('The Hoxton', municipalities.london),
-  humbleBee: Place.from('Humble Bee', municipalities.okehampton),
-  pigBrockenhurst: Place.from('The Pig', municipalities.brokenhurst),
-  pigBridgePlace: Place.from(
-    'The Pig at Bridge Place',
-    municipalities.canterbury,
-  ),
-  seahamHallHotel: Place.from('Seaham Hall Hotel', municipalities.durham),
-  scarletHotel: Place.from('Scarlet Hotel', municipalities.mawganPorth),
-  sedgefordHall: Place.from('Sedgeford Hall', regions.norfolk, [52.9, 0.6]),
-  starAndGarterFalmouth: Place.from('Star and Garter', municipalities.falmouth),
-  thymeHotel: Place.from('Thyme Hotel', regions.cotswolds, [51.7, -1.7]),
-  velvetHotel: Place.from('Velvet Hotel', municipalities.manchester),
-};
-
 export const placesUk = {
   ...regions,
   ...municipalities,
-  ...accomodations,
 };
