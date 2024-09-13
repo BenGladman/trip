@@ -20,5 +20,6 @@ export const trips2010 = [
     accommodations.scarletHotel,
     places.stIves,
     activities.drive,
+    activities.spa,
   ]),
 ];

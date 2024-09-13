@@ -12,6 +12,7 @@ export const activities = {
   fringe: Activity.from('Edinburgh fringe', '🎭'),
   nye: Activity.from('New Year’s Eve', '🥳'),
   pride: Activity.from('Pride', '🏳️‍🌈'),
+  spa: Activity.from('Spa', '💆'),
   train: Activity.from('Train', '🚂'),
   wedding: Activity.from('Wedding', '💍'),
 };

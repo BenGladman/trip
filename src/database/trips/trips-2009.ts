@@ -34,5 +34,6 @@ export const trips2009 = [
     accommodations.scarletHotel,
     activities.anniversary,
     activities.drive,
+    activities.spa,
   ]),
 ];
