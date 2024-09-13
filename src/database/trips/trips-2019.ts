@@ -8,6 +8,7 @@ export const trips2019 = [
   Trip.from(PlainDate.from(2019, 4, 19), PlainDate.from(2019, 4, 22), [
     accommodations.starAndGarterFalmouth,
     activities.birthday,
+    activities.train,
   ]),
 
   Trip.from(PlainDate.from(2019, 5, 4), PlainDate.from(2019, 5, 11), [

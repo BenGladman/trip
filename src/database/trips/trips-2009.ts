@@ -24,13 +24,15 @@ export const trips2009 = [
     activities.fringe,
   ]),
 
-  Trip.from(PlainDate.from(2009, 9, 11), PlainDate.from(2009, 9, 13), [
+  Trip.from(PlainDate.from(2009, 9, 11), PlainDate.from(2009, 9, 15), [
     places.cavan,
     activities.wedding,
+    activities.drive,
   ]),
 
-  Trip.from(PlainDate.from(2009, 10, 29), PlainDate.from(2009, 11, 1), [
+  Trip.from(PlainDate.from(2009, 10, 27), PlainDate.from(2009, 11, 1), [
     accommodations.scarletHotel,
     activities.anniversary,
+    activities.drive,
   ]),
 ];

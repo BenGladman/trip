@@ -4,14 +4,16 @@ import { agents } from '../agents';
 import { places } from '../places/places';
 
 export const trips2014 = [
-  Trip.from(PlainDate.from(2014, 4, 17), PlainDate.from(2014, 4, 20), [
+  Trip.from(PlainDate.from(2014, 4, 18), PlainDate.from(2014, 4, 21), [
     places.windermere,
     activities.birthday,
+    activities.drive,
   ]),
 
-  Trip.from(PlainDate.from(2014, 8, 17), PlainDate.from(2014, 8, 19), [
+  Trip.from(PlainDate.from(2014, 8, 16), PlainDate.from(2014, 8, 19), [
     places.woolacombe,
     activities.birthday,
+    activities.drive,
   ]),
 
   Trip.from(PlainDate.from(2014, 9, 13), PlainDate.from(2014, 9, 28), [
@@ -20,6 +22,7 @@ export const trips2014 = [
     places.vancouver,
     places.campbellRiver,
     activities.drive,
+    activities.train,
     agents.audley,
   ]),
 
