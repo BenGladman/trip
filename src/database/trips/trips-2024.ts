@@ -34,8 +34,13 @@ export const trips2024 = [
 
   Trip.from(PlainDate.from(2024, 9, 28), PlainDate.from(2024, 10, 11), [
     places.boston,
-    places.provinceTown,
+    places.provinceTownMA,
     places.marthasVineyard,
+    places.newportRI,
+    places.lenoxMA,
+    places.woodstockVT,
+    places.jacksonNH,
+    places.kennebunkportME,
     activities.drive,
     agents.audley,
   ]),
