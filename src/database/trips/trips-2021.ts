@@ -1,4 +1,4 @@
-import { PlainDate, Trip } from '../../types';
+import { Link, PlainDate, Trip } from '../../types';
 import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
@@ -10,6 +10,7 @@ export const trips2021 = [
     places.todmorden,
     places.hebdenBridge,
     activities.canalBoat,
+    Link.googlePhotos('AF1QipNoZw4JCGmkyZHlnbnHZY6FwUeoMjA3BGc8Tps'),
     agents.shireCruisers,
   ]),
 

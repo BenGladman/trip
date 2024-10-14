@@ -38,6 +38,22 @@ export function TripRow({ trip }: TripRowProps) {
         </div>
       </td>
       <td>
+        <div className="flex flex-row items-start gap-1">
+          {trip.links.map((link) => (
+            <a
+              key={link.url.href}
+              className="whitespace-nowrap text-blue-300 flex flex-row gap-1"
+              href={link.url.href}
+              rel="noopener noreferrer"
+              target="_blank"
+              title={link.label}
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
+      </td>
+      <td>
         <div className="flex flex-row flex-wrap gap-1">
           {trip.places.map((place) => (
             <FilterButton key={place.name} filter={place} />

@@ -1,4 +1,4 @@
-import { PlainDate, Trip } from '../../types';
+import { Link, PlainDate, Trip } from '../../types';
 import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
@@ -14,6 +14,7 @@ export const trips2023 = [
     places.rugby,
     places.warwick,
     activities.canalBoat,
+    Link.googlePhotos('AF1QipOXA8JMPjfxLmKB8rEz9GXB6m_dU0bNVCBpBdg'),
     agents.kateBoats,
   ]),
 
@@ -32,6 +33,7 @@ export const trips2023 = [
   Trip.from(PlainDate.from(2023, 8, 31), PlainDate.from(2023, 9, 3), [
     places.greatYarmouth,
     activities.wedding,
+    Link.googlePhotos('AF1QipPu39YyimlQrnCh-XaN1i9LgCc5Em80EEGF3_c'),
   ]),
 
   Trip.from(PlainDate.from(2023, 10, 4), PlainDate.from(2023, 10, 18), [
@@ -40,6 +42,7 @@ export const trips2023 = [
     places.milos,
     places.santorini,
     activities.anniversary,
+    Link.googlePhotos('AF1QipPTRgHbHs0EH3EdWEItMsb_hSys2OAXe16LigM'),
     agents.audley,
   ]),
 ];

@@ -4,6 +4,7 @@ import { Agent } from './Agent';
 import type { Coordinates } from './Coordinates';
 import { Country } from './Country';
 import type { Filter } from './Filter';
+import { Link } from './Link';
 import { Place } from './Place';
 import type { PlainDate } from './PlainDate';
 
@@ -15,6 +16,7 @@ export class Trip {
   public readonly places: readonly Place[];
   public readonly accommodations: readonly Accommodation[];
   public readonly activities: readonly Activity[];
+  public readonly links: Link[];
   public readonly agent: Agent | null;
   public readonly coordinates: readonly Coordinates[];
 
@@ -26,6 +28,7 @@ export class Trip {
     places: Iterable<Place>,
     accommodations: Iterable<Accommodation>,
     activities: Iterable<Activity>,
+    links: Iterable<Link>,
     agent: Agent | null,
     coordinates: Iterable<Coordinates>,
   ) {
@@ -36,6 +39,7 @@ export class Trip {
     this.places = Array.from(places);
     this.accommodations = Array.from(accommodations);
     this.activities = Array.from(activities);
+    this.links = Array.from(links);
     this.agent = agent;
     this.coordinates = Array.from(coordinates);
   }
@@ -79,12 +83,13 @@ export class Trip {
   public static from(
     start: PlainDate,
     finish: PlainDate,
-    data: Array<Place | Accommodation | Activity | Agent>,
+    data: Array<Place | Accommodation | Activity | Link | Agent>,
   ) {
     const countrySet = new Set<Country>();
     const placeSet = new Set<Place>();
     const accommodationSet = new Set<Accommodation>();
     const activitySet = new Set<Activity>();
+    const linkSet = new Set<Link>();
     let agent: Agent | null = null;
 
     const addPlace = (place: Place) => {
@@ -103,6 +108,8 @@ export class Trip {
         addPlace(item.place);
       } else if (item instanceof Activity) {
         activitySet.add(item);
+      } else if (item instanceof Link) {
+        linkSet.add(item);
       } else if (item instanceof Agent) {
         agent = item;
       }
@@ -126,6 +133,7 @@ export class Trip {
       placeSet,
       accommodationSet,
       activitySet,
+      linkSet,
       agent,
       coordinates,
     );

@@ -1,4 +1,4 @@
-import { PlainDate, Trip } from '../../types';
+import { Link, PlainDate, Trip } from '../../types';
 import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
@@ -15,6 +15,7 @@ export const trips2019 = [
     places.pontcysyllte,
     places.whitchurch,
     activities.canalBoat,
+    Link.googlePhotos('AF1QipOFk_PHOyZ2DlDNDfNY1uo8FVN6y_DGoLDZtw8'),
     agents.angloWelsh,
   ]),
 
@@ -27,6 +28,7 @@ export const trips2019 = [
     places.antananarivo,
     places.ifaty,
     activities.cycling,
+    Link.googlePhotos('AF1QipPUqq1BKuqm-dWLsFYfYuM2CmKlAWIISGRikeE'),
     agents.exodus,
   ]),
 ];

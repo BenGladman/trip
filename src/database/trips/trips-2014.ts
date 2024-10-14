@@ -1,4 +1,4 @@
-import { PlainDate, Trip } from '../../types';
+import { Link, PlainDate, Trip } from '../../types';
 import { activities } from '../activities';
 import { agents } from '../agents';
 import { places } from '../places/places';
@@ -23,6 +23,7 @@ export const trips2014 = [
     places.campbellRiver,
     activities.drive,
     activities.train,
+    Link.googlePhotos('AF1QipNWjMlyi_GXCkSsChbr6RJXYuBf9fWZ0P4nRtw'),
     agents.audley,
   ]),
 

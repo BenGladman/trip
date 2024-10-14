@@ -1,4 +1,4 @@
-import { PlainDate, Trip } from '../../types';
+import { Link, PlainDate, Trip } from '../../types';
 import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
@@ -14,6 +14,7 @@ export const trips2018 = [
     places.stratfordUponAvon,
     places.warwick,
     activities.canalBoat,
+    Link.googlePhotos('AF1QipOMsEVrhIYw9vi8nVPaI7PDkTpAnRlraV2Pm3o'),
     agents.stratfordCourtCruisers,
   ]),
 
@@ -30,10 +31,12 @@ export const trips2018 = [
     accommodations.greeDesLandes,
     activities.birthday,
     activities.drive,
+    Link.googlePhotos('AF1QipOMCmXMep_uXySmjeGTyGHgbtJKhaP18DxNSDQ'),
   ]),
 
   Trip.from(PlainDate.from(2018, 12, 28), PlainDate.from(2019, 1, 4), [
     accommodations.sedgefordHall,
     activities.nye,
+    Link.googlePhotos('AF1QipNQagfXSyUCDShwHSy59uISI3hz5g4ydy9Nk3E'),
   ]),
 ];
