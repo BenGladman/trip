@@ -10,7 +10,9 @@ export const trips2021 = [
     places.todmorden,
     places.hebdenBridge,
     activities.canalBoat,
-    Link.googlePhotos('AF1QipNoZw4JCGmkyZHlnbnHZY6FwUeoMjA3BGc8Tps'),
+    Link.googlePhotos(
+      'AF1QipNEy99JYzVzIyDkiLTjttuFWMkNb98MR5cxhceDlASMzrR74s6ZJI0522HPBpCQzw',
+    ),
     agents.shireCruisers,
   ]),
 

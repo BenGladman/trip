@@ -10,21 +10,27 @@ export const trips2024 = [
     places.amalfi,
     activities.birthday,
     activities.cycling,
-    Link.googlePhotos('AF1QipMZ9Lz42_v5264thgjk8hclmb94Wcs1fy9Npio'),
+    Link.googlePhotos(
+      'AF1QipPQtFEAzKs99ntYwbIZ8Xub3biQD0aWp1ECgiHFAmLNbn4F5_EHDkYa88-Ctx5CBw',
+    ),
     agents.exodus,
   ]),
 
   Trip.from(PlainDate.from(2024, 5, 3), PlainDate.from(2024, 5, 6), [
     places.rye,
     activities.birthday,
-    Link.googlePhotos('AF1QipMOjO7Z5HaS1TrNht99Islic7OlMdGs5mZ32e0'),
+    Link.googlePhotos(
+      'AF1QipMMNLXbr9uo5bvAp-RF0lW4nhVqHqh_ELa-F-6I0ytnREoXBRkcgjRm-5Yri8PJMQ',
+    ),
   ]),
 
   Trip.from(PlainDate.from(2024, 5, 16), PlainDate.from(2024, 5, 23), [
     places.skipton,
     places.foulridge,
     activities.canalBoat,
-    Link.googlePhotos('AF1QipPqzzZxriOJ6igcEzKP1uy_Pb10RUSLEQ3lbZI'),
+    Link.googlePhotos(
+      'AF1QipMrmnckwuqtBmAmGn-Hwm0JOu9Lab-9bWkgyrBonYktXVfjTi41QOA2F0915f3Z-Q',
+    ),
     agents.silsdenBoats,
   ]),
 
@@ -33,7 +39,9 @@ export const trips2024 = [
     accommodations.chelseaHouseFalmouth,
     activities.birthday,
     activities.drive,
-    Link.googlePhotos('AF1QipPK9x65QeQaF1odxu533aHDvB0QhqUB1Px6wOA'),
+    Link.googlePhotos(
+      'AF1QipOHvdxJ_mIBMVWXl6Kht9F7yD4PG-J5j3y8agBIhd-zGPUrLkVgi4OETrZHVVZbfg',
+    ),
   ]),
 
   Trip.from(PlainDate.from(2024, 9, 28), PlainDate.from(2024, 10, 11), [
@@ -56,5 +64,8 @@ export const trips2024 = [
     places.amsterdam,
     activities.concert,
     activities.cityBreak,
+    Link.googlePhotos(
+      'AF1QipPcxi6IDZdPiEd1iEvx3e4EccSCq7ycPj1hqbODB1c3I3Q8ABLZmmlJVFIOQqvPsQ',
+    ),
   ]),
 ];

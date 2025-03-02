@@ -12,14 +12,18 @@ export const trips2013 = [
     places.singapore,
     places.kohSamui,
     activities.spa,
-    Link.googlePhotos('AF1QipNQIB8Wi-SZux-OqB7jw1zkQT3hzFXI4zoTUZw'),
+    Link.googlePhotos(
+      'AF1QipOHfiySJBSvmFjaNZMgPiu3_LZXqyFbHTuAdBW1eFdhTkx-Sr0O1eyCbjgIrOxujQ',
+    ),
   ]),
 
   Trip.from(PlainDate.from(2013, 11, 16), PlainDate.from(2013, 11, 22), [
     places.berlin,
     activities.concert,
     activities.cityBreak,
-    Link.googlePhotos('AF1QipM3eDH2PbJSYs0vO99fgRpokDYsTww-7ARJ0kU'),
+    Link.googlePhotos(
+      'AF1QipN9bSC40UcCdds45G0XIO7Xb_vpLeLHSxCl28NnSAhCyaPtjVPQcPVWJjUnLgBx3w',
+    ),
   ]),
 
   Trip.from(PlainDate.from(2013, 12, 28), PlainDate.from(2014, 1, 4), [

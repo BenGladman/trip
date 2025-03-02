@@ -7,7 +7,9 @@ export const trips2016 = [
   Trip.from(PlainDate.from(2016, 4, 27), PlainDate.from(2016, 5, 1), [
     places.nice,
     activities.cityBreak,
-    Link.googlePhotos('AF1QipO7IAEhhOaFd_BfBUvv_FOHO_PtfYvTeviN_Kw'),
+    Link.googlePhotos(
+      'AF1QipOEQ0RrCLOyVsfFUE4Rqq5A9nPLwWRvBURMC9PuncTjcUsOgn3LKguf12LtkHBW2A',
+    ),
   ]),
 
   Trip.from(PlainDate.from(2016, 8, 26), PlainDate.from(2016, 8, 29), [

@@ -15,7 +15,9 @@ export const trips2019 = [
     places.pontcysyllte,
     places.whitchurch,
     activities.canalBoat,
-    Link.googlePhotos('AF1QipOFk_PHOyZ2DlDNDfNY1uo8FVN6y_DGoLDZtw8'),
+    Link.googlePhotos(
+      'AF1QipN542bX_AH8Ye-8BGCYdYBnKDaHAtkXKLkfFoyCuRWTJVJn-f1P7XWIOzxaJ92kqA',
+    ),
     agents.angloWelsh,
   ]),
 
@@ -28,7 +30,9 @@ export const trips2019 = [
     places.antananarivo,
     places.ifaty,
     activities.cycling,
-    Link.googlePhotos('AF1QipPUqq1BKuqm-dWLsFYfYuM2CmKlAWIISGRikeE'),
+    Link.googlePhotos(
+      'AF1QipOVNKSU-xzJ3pLFx3Es8i0l22VQgb6djsTUr7lnI6ar4zBpMBU09lzgfx2L0uCqaQ',
+    ),
     agents.exodus,
   ]),
 ];

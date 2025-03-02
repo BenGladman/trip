@@ -1,4 +1,4 @@
-import { PlainDate, Trip } from '../../types';
+import { Link, PlainDate, Trip } from '../../types';
 import { accommodations } from '../accommodations';
 import { activities } from '../activities';
 import { agents } from '../agents';
@@ -7,6 +7,9 @@ import { places } from '../places/places';
 export const trips2020 = [
   Trip.from(PlainDate.from(2020, 1, 25), PlainDate.from(2020, 1, 31), [
     accommodations.vilaVita,
+    Link.googlePhotos(
+      'AF1QipNTgAKOhlWyS1Lsxt1nkrVDdxVD5D0uVMuAsDJcLLtQdN60Pd9-HT5Qt76sT7L55g',
+    ),
   ]),
 
   Trip.from(PlainDate.from(2020, 8, 17), PlainDate.from(2020, 8, 24), [
