@@ -11,6 +11,7 @@ export const countries = {
   ...uk,
   argentina: Country.from('Argentina', continents.southAmerica, '🇦🇷'),
   brazil: Country.from('Brazil', continents.southAmerica, '🇧🇷'),
+  cambodia: Country.from('Cambodia', continents.asia, '🇰🇭'),
   canada: Country.from('Canada', continents.northAmerica, '🇨🇦'),
   croatia: Country.from('Croatia', continents.europe, '🇭🇷'),
   france: Country.from('France', continents.europe, '🇫🇷'),
@@ -27,5 +28,6 @@ export const countries = {
   sweden: Country.from('Sweden', continents.europe, '🇸🇪'),
   switzerland: Country.from('Switzerland', continents.europe, '🇨🇭'),
   thailand: Country.from('Thailand', continents.asia, '🇹🇭'),
+  vietnam: Country.from('Vietnam', continents.asia, '🇻🇳'),
   usa: Country.from('USA', continents.northAmerica, '🇺🇸'),
 };

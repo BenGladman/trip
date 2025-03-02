@@ -13,7 +13,7 @@ export class Link {
 
   public static googlePhotos(albumId: string) {
     return new Link(
-      new URL(albumId, 'https://photos.google.com/album/'),
+      new URL(albumId, 'https://photos.google.com/share/'),
       '📷',
       'Photos',
     );

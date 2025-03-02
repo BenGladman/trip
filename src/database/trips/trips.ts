@@ -16,6 +16,7 @@ import { trips2021 } from './trips-2021';
 import { trips2022 } from './trips-2022';
 import { trips2023 } from './trips-2023';
 import { trips2024 } from './trips-2024';
+import { trips2025 } from './trips-2025';
 
 export const trips = [
   ...trips2007,
@@ -36,6 +37,7 @@ export const trips = [
   ...trips2022,
   ...trips2023,
   ...trips2024,
+  ...trips2025,
 ];
 
 trips.sort((a, b) => b.start.date.valueOf() - a.start.date.valueOf());
