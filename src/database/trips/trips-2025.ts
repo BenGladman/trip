@@ -21,5 +21,8 @@ export const trips2025 = [
   Trip.from(PlainDate.from(2025, 4, 18), PlainDate.from(2025, 4, 21), [
     places.palma,
     activities.birthday,
+    Link.googlePhotos(
+      'AF1QipM1MNzOyp4p1Df9OmJMD0Yfte70D62GoHmSpqWnMuHFCusykP-VYu6sLDd0MjaRZA',
+    ),
   ]),
 ];
