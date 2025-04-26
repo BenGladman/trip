@@ -29,6 +29,7 @@ const municipalities = {
   naxos: Place.from('Naxos', countries.greece),
   nice: Place.from('Nice', countries.france, [43.7, 7.3]),
   obernai: Place.from('Obernai', countries.france),
+  palma: Place.from('Palma, Majorca', countries.spain, [39.6, 2.7]),
   paris: Place.from('Paris', countries.france, [48.9, 2.3]),
   pisa: Place.from('Pisa', countries.italy, [43.7, 10.4]),
   santorini: Place.from('Santorini', countries.greece, [36.4, 25.5]),

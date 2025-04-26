@@ -17,4 +17,9 @@ export const trips2025 = [
     ),
     agents.exodus,
   ]),
+
+  Trip.from(PlainDate.from(2025, 4, 18), PlainDate.from(2025, 4, 21), [
+    places.palma,
+    activities.birthday,
+  ]),
 ];
