@@ -27,6 +27,7 @@ export const trips2025 = [
   ]),
 
   Trip.from(PlainDate.from(2025, 5, 29), PlainDate.from(2025, 6, 6), [
+    places.saltaire,
     places.leeds,
     activities.canalBoat,
     Link.googlePhotos(

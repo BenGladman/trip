@@ -61,6 +61,7 @@ const municipalities = {
   poole: Place.from('Poole', countries.england),
   rugby: Place.from('Rugby', regions.midlands, [52.4, -1.3]),
   rye: Place.from('Rye', regions.sussex, [51, 0.7]),
+  saltaire: Place.from('Saltaire', regions.yorkshire, [53.9, -1.8]),
   skipton: Place.from('Skipton', regions.yorkshire, [54, -2]),
   sowerbyBridge: Place.from('Sowerby Bridge', regions.yorkshire, [53.7, -1.9]),
   standedgeTunnel: Place.from('Standedge Tunnel', countries.england),
