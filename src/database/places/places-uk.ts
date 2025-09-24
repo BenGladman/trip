@@ -47,6 +47,7 @@ const municipalities = {
   huddersfield: Place.from('Huddersfield', regions.yorkshire),
   hunstanton: Place.from('Hunstanton', regions.norfolk, [52.9, 0.5]),
   lechlade: Place.from('Lechlade-on-Thames', regions.cotswolds, [51.7, -1.7]),
+  leeds: Place.from('Leeds', regions.yorkshire, [53.8, -1.5]),
   leightonBuzzard: Place.from('Leighton Buzzard', countries.england),
   london: Place.from('London', countries.england, [51.5, -0.1]),
   manchester: Place.from('Manchester', countries.england, [53.5, -2.2]),

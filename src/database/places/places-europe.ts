@@ -32,6 +32,13 @@ const municipalities = {
   palma: Place.from('Palma, Majorca', countries.spain, [39.6, 2.7]),
   paris: Place.from('Paris', countries.france, [48.9, 2.3]),
   pisa: Place.from('Pisa', countries.italy, [43.7, 10.4]),
+  porto: Place.from('Porto', countries.portugal, [41.2, -8.6]),
+  pontevedra: Place.from('Pontevedra', countries.spain, [42.4, -8.6]),
+  santiagoDeCompostela: Place.from(
+    'Santiago de Compostela',
+    countries.spain,
+    [42.9, -8.6],
+  ),
   santorini: Place.from('Santorini', countries.greece, [36.4, 25.5]),
   sitges: Place.from('Sitges', countries.spain),
   stockholm: Place.from('Stockholm', countries.sweden, [59.3, 18.1]),
