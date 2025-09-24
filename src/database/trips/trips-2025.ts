@@ -33,7 +33,6 @@ export const trips2025 = [
       'AF1QipP1I3GidLDXQpVTFL3iW-vBzMmPebNEhqV4KESDcPE-qkhFZlQyskMgTA7s9_4e0Q',
     ),
     agents.silsdenBoats,
-    agents.angloWelsh,
   ]),
 
   Trip.from(PlainDate.from(2025, 7, 18), PlainDate.from(2025, 7, 21), [
