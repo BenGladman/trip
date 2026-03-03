@@ -51,6 +51,7 @@ export const trips2025 = [
     Link.googlePhotos(
       'AF1QipPB27-pCicsQ_qPEh6-lPnNHOgDcPy9eSuAL7-S2ym3ntgtLZK8rGAaVUJSP6GtLg',
     ),
+    agents.exodus,
   ]),
 
   Trip.from(PlainDate.from(2025, 12, 23), PlainDate.from(2026, 1, 3), [
