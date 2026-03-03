@@ -52,4 +52,14 @@ export const trips2025 = [
       'AF1QipPB27-pCicsQ_qPEh6-lPnNHOgDcPy9eSuAL7-S2ym3ntgtLZK8rGAaVUJSP6GtLg',
     ),
   ]),
+
+  Trip.from(PlainDate.from(2025, 12, 23), PlainDate.from(2026, 1, 3), [
+    places.glasgow,
+    places.dunragit,
+    activities.nye,
+    activities.train,
+    Link.googlePhotos(
+      'AF1QipOrILFdXTJ6gnykuvucOMBZsqAxp3lgTW6MNAqGO5B1Ln0eHuPR4dCdx2DIu_L0mQ',
+    ),
+  ]),
 ];
