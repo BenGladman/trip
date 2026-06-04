@@ -21,6 +21,7 @@ export const countries = {
   italy: Country.from('Italy', continents.europe, '🇮🇹'),
   jersey: Country.from('Jersey', continents.europe, '🇯🇪'),
   madagascar: Country.from('Madagascar', continents.africa, '🇲🇬'),
+  malta: Country.from('Malta', continents.europe, '🇲🇹'),
   netherlands: Country.from('Netherlands', continents.europe, '🇳🇱'),
   portugal: Country.from('Portugal', continents.europe, '🇵🇹'),
   singapore: Country.from('Singapore', continents.asia, '🇸🇬'),

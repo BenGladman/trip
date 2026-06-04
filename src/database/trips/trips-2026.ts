@@ -16,4 +16,25 @@ export const trips2026 = [
     ),
     agents.exodus,
   ]),
+
+  Trip.from(PlainDate.from(2026, 4, 17), PlainDate.from(2026, 4, 20), [
+    places.valletta,
+    activities.birthday,
+    activities.cityBreak,
+  ]),
+
+  Trip.from(PlainDate.from(2026, 5, 23), PlainDate.from(2026, 5, 28), [
+    places.split,
+    activities.cityBreak,
+  ]),
+
+  Trip.from(PlainDate.from(2026, 8, 16), PlainDate.from(2026, 8, 22), [
+    places.palma,
+    activities.birthday,
+  ]),
+
+  Trip.from(PlainDate.from(2026, 10, 30), PlainDate.from(2026, 11, 2), [
+    places.lakes,
+    activities.anniversary,
+  ]),
 ];

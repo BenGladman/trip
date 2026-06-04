@@ -48,8 +48,10 @@ const municipalities = {
   stockholm: Place.from('Stockholm', countries.sweden, [59.3, 18.1]),
   strasbourg: Place.from('Strasbourg', countries.france, [48.6, 7.8]),
   saintJean: Place.from('Saint-Jean-d’Aulps', countries.france, [46.2, 6.7]),
+  split: Place.from('Split', countries.croatia, [43.5, 16.4]),
   stHellier: Place.from('St Helier', countries.jersey, [49.2, -2.1]),
   tuscany: Place.from('Tuscany', countries.italy),
+  valletta: Place.from('Valletta', countries.malta, [35.9, 14.5]),
   zurich: Place.from('Zurich', countries.switzerland, [47.4, 8.5]),
 };
 
