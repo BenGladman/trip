@@ -11,6 +11,7 @@ export function useLandMaterial(mixColor: Color) {
   }, []);
 
   useFrame(({ clock }) => {
+    // oxlint-disable-next-line react/immutability
     uniforms.time.value = clock.elapsedTime;
     uniforms.color1.value = mixColor;
   });

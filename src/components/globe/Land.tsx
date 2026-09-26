@@ -23,7 +23,7 @@ export function Land() {
   const selectedTrip = useTripStore((s) => s.selectedTrip);
 
   useEffect(() => {
-    initializeTripStoreLandDots(worldPngPath);
+    void initializeTripStoreLandDots(worldPngPath);
   }, []);
 
   useEffect(() => {

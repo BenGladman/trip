@@ -24,14 +24,13 @@ export function Globe() {
       );
 
       targetQuaternion.setFromEuler(targetEuler);
-    } else {
-      targetEuler.x = 0;
     }
   }, [selectedCoordinates, targetQuaternion, targetEuler]);
 
   useFrame((_, delta) => {
     if (!selectedCoordinates) {
-      targetEuler.y -= delta / 4;
+      // spin when no selected coordinate
+      targetEuler.set(0, targetEuler.y - delta / 4, targetEuler.z);
       targetQuaternion.setFromEuler(targetEuler);
     }
 
